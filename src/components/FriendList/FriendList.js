@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import avatarDefault from '../images/avatarDefault.png';
+import avatarDefault from './images/avatarDefault.png';
+
 export default function FriendList({ friends }) {
   return (
     <ul className="friend-list">
