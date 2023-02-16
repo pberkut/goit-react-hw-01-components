@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import avatarDefault from './images/avatarDefault.png';
 
-export default function FriendList({ friends }) {
+export const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
       {friends.map(({ avatar, name, isOnline, id }) => (
@@ -11,7 +11,7 @@ export default function FriendList({ friends }) {
       ))}
     </ul>
   );
-}
+};
 
 function FriendItem({ avatar, name, isOnline }) {
   return (
@@ -35,6 +35,6 @@ FriendList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };

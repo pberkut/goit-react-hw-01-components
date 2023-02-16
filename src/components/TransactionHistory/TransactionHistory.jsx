@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function TransactionHistory({ items }) {
+export const TransactionHistory = ({ items }) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -24,7 +24,7 @@ export default function TransactionHistory({ items }) {
       </tbody>
     </table>
   );
-}
+};
 
 function TransactionHistoryItem({ type, amount, currency }) {
   return (
@@ -43,6 +43,6 @@ TransactionHistory.propTypes = {
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
+    }).isRequired
   ),
 };

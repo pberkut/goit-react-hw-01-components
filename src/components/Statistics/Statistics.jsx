@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
@@ -41,8 +41,6 @@ StatList.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
+    }).isRequired
   ),
 };
-
-export default Statistics;
