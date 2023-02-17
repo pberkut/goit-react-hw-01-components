@@ -48,7 +48,7 @@ export const Stats = styled.ul`
 export const StatsItem = styled.li`
   width: 100%;
   background-color: #f3f6f9;
-  border: 1px solid #bbbbbb;
+  outline: 1px solid #bbbbbb;
 `;
 
 export const Label = styled.span`

@@ -21,8 +21,8 @@ export const Statistics = ({ title, stats }) => {
 function StatList({ stats }) {
   return (
     <StatListCard>
-      {stats.map(({ id, label, percentage }) => (
-        <StatItemCard key={id}>
+      {stats.map(({ id, label, percentage }, idx) => (
+        <StatItemCard key={id} index={idx}>
           <StatItem label={label} percentage={percentage} />
         </StatItemCard>
       ))}
@@ -34,7 +34,7 @@ function StatItem({ label, percentage }) {
   return (
     <>
       <Label>{label}</Label>
-      <Percentage>{percentage}</Percentage>
+      <Percentage>{percentage + '%'}</Percentage>
     </>
   );
 }
