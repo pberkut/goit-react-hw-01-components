@@ -28,8 +28,6 @@ img {
   max-width: 100%;
   height: auto;
 
-  margin-left: auto;
-  margin-right: auto;
 }
 
 ul {
