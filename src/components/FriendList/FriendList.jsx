@@ -1,29 +1,31 @@
 import PropTypes from 'prop-types';
+import {
+  FriendCardList,
+  FriendCardItem,
+  Status,
+  ImgAvatar,
+  Name,
+} from './FriendList.styled';
 import avatarDefault from './images/avatarDefault.png';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <FriendCardList>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li className="item" key={id}>
+        <FriendCardItem key={id}>
           <FriendItem avatar={avatar} name={name} isOnline={isOnline} />
-        </li>
+        </FriendCardItem>
       ))}
-    </ul>
+    </FriendCardList>
   );
 };
 
 function FriendItem({ avatar, name, isOnline }) {
   return (
     <>
-      <span className="status">{isOnline ? 'Online' : 'Offline'}</span>
-      <img
-        className="avatar"
-        src={avatar ?? avatarDefault}
-        alt="User avatar"
-        width="48"
-      />
-      <p className="name">{name}</p>
+      <Status>{isOnline ? '🟢' : '🔴'}</Status>
+      <ImgAvatar src={avatar ?? avatarDefault} alt="User avatar" width="48" />
+      <Name>{name}</Name>
     </>
   );
 }

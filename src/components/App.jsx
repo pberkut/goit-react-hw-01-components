@@ -38,7 +38,9 @@ export const App = () => {
         <FriendList friends={friends} />
       </Wrapper>
 
-      <TransactionHistory items={transactions} />
+      <Wrapper>
+        <TransactionHistory items={transactions} />
+      </Wrapper>
     </>
   );
 };
