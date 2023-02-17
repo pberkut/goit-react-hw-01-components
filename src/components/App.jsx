@@ -1,3 +1,5 @@
+import { GlobalStyle } from './GlobalStyle';
+
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
 import friends from './FriendList/friends.json';
@@ -11,6 +13,7 @@ import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
     <>
+      <GlobalStyle />
       <Profile
         username={user.username}
         tag={user.tag}
