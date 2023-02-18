@@ -28,9 +28,6 @@ export const TransactionHistoryTable = styled.table`
     }
   }
 
-  tbody {
-  }
-
   td {
     border-width: 1px;
     border-color: #ecf1f4;
