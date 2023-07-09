@@ -1,7 +1,7 @@
 import { GlobalStyle } from './styles/GlobalStyle';
 import styles from './styles/styles.module.scss';
 
-import users from '../data/user.json';
+import user from '../data/user.json';
 import statistics from '../data/statistics.json';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
@@ -17,7 +17,7 @@ export const App = () => {
       <GlobalStyle />
 
       <div className={styles.container}>
-        <Profile users={users} />
+        <Profile user={user} />
 
         <Statistics title="Upload stats" stats={statistics} />
 

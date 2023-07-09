@@ -12,14 +12,14 @@ import {
   Label,
 } from './Profile.styled';
 
-export const Profile = ({ users }) => {
+export const Profile = ({ user }) => {
   const {
     username,
     tag,
     location,
     avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
     stats,
-  } = users;
+  } = user;
 
   return (
     <>
@@ -51,13 +51,15 @@ export const Profile = ({ users }) => {
 };
 
 Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-  }).isRequired,
+  users: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  }),
 };

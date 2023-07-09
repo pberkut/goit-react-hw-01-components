@@ -8,7 +8,7 @@ import {
   Tittle,
 } from './Statistics.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats = [] }) => {
   return (
     <StatisticsCard>
       {title && <Tittle>{title.toUpperCase()}</Tittle>}
@@ -18,7 +18,7 @@ export const Statistics = ({ title, stats }) => {
   );
 };
 
-function StatList({ stats }) {
+function StatList({ stats = [] }) {
   return (
     <StatListCard>
       {stats.map(({ id, label, percentage }, idx) => (
