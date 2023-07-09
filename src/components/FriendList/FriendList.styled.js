@@ -18,6 +18,7 @@ export const FriendCardItem = styled.li`
 `;
 
 export const Status = styled.span`
+  margin: 0 10px;
   display: flex;
   align-items: center;
 `;

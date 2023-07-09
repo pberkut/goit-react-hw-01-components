@@ -11,9 +11,9 @@ import avatarDefault from './images/avatarDefault.png';
 export const FriendList = ({ friends = [] }) => {
   return (
     <FriendCardList>
-      {friends.map(({ avatar, name, isOnline, id }) => (
+      {friends.map(({ id, ...props }) => (
         <FriendCardItem key={id}>
-          <FriendItem avatar={avatar} name={name} isOnline={isOnline} />
+          <FriendItem {...props} />
         </FriendCardItem>
       ))}
     </FriendCardList>
