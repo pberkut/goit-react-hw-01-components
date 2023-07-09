@@ -12,13 +12,15 @@ import {
   Label,
 } from './Profile.styled';
 
-export const Profile = ({
-  username,
-  tag,
-  location,
-  avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-  stats,
-}) => {
+export const Profile = ({ users }) => {
+  const {
+    username,
+    tag,
+    location,
+    avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+    stats,
+  } = users;
+
   return (
     <>
       <ProfileCard>

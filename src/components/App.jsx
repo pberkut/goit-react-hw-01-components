@@ -1,7 +1,7 @@
-import { GlobalStyle } from './GlobalStyle';
-import { Wrapper } from './Layout/Wrapper';
+import { GlobalStyle } from './styles/GlobalStyle';
+import styles from './styles/styles.module.scss';
 
-import user from '../data/user.json';
+import users from '../data/user.json';
 import statistics from '../data/statistics.json';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
@@ -16,31 +16,17 @@ export const App = () => {
     <>
       <GlobalStyle />
 
-      <Wrapper>
-        <Profile
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-          avatar={user.avatar}
-          stats={user.stats}
-        />
-      </Wrapper>
+      <div className={styles.container}>
+        <Profile users={users} />
 
-      <Wrapper>
         <Statistics title="Upload stats" stats={statistics} />
-      </Wrapper>
 
-      <Wrapper>
         <Statistics stats={statistics} />
-      </Wrapper>
 
-      <Wrapper>
         <FriendList friends={friends} />
-      </Wrapper>
 
-      <Wrapper>
         <TransactionHistory items={transactions} />
-      </Wrapper>
+      </div>
     </>
   );
 };
