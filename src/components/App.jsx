@@ -1,10 +1,10 @@
 import { GlobalStyle } from './GlobalStyle';
 import { Wrapper } from './Layout/Wrapper';
 
-import user from './Profile/user.json';
-import data from './Statistics/data.json';
-import friends from './FriendList/friends.json';
-import transactions from './TransactionHistory/transactions.json';
+import user from '../data/user.json';
+import statistics from '../data/statistics.json';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
 
 import { Profile } from './Profile';
 import { Statistics } from './Statistics';
@@ -27,11 +27,11 @@ export const App = () => {
       </Wrapper>
 
       <Wrapper>
-        <Statistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={statistics} />
       </Wrapper>
 
       <Wrapper>
-        <Statistics stats={data} />
+        <Statistics stats={statistics} />
       </Wrapper>
 
       <Wrapper>

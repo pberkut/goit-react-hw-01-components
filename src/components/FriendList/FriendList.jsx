@@ -8,7 +8,7 @@ import {
 } from './FriendList.styled';
 import avatarDefault from './images/avatarDefault.png';
 
-export const FriendList = ({ friends }) => {
+export const FriendList = ({ friends = [] }) => {
   return (
     <FriendCardList>
       {friends.map(({ avatar, name, isOnline, id }) => (
